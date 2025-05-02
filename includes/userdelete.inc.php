@@ -5,7 +5,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Grab the post data
     $username = htmlspecialchars($_POST["username"]);
     $password = htmlspecialchars($_POST["password"]);
-    $email = htmlspecialchars($_POST["email"]);
  
     // Check for empty attributes
     if(empty($username)){
@@ -16,22 +15,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
         header("Location: ../index.php");
     }
-    if(empty($email)){
-        exit();
-        header("Location: ../index.php");
-    }
     
     try {
         require_once "dbh.inc.php";
 
-        $query = "INSERT INTO users (username, pwd, email) Values 
-        (:username, :pwd, :email);";
+        $query = "DELETE FROM users WHERE username = :username AND pwd = :pwd;";
 
         $statement = $pdo->prepare($query);
 
         $statement->bindParam(":username", $username);
         $statement->bindParam(":pwd", $password);
-        $statement->bindParam(":email", $email);
 
         $statement->execute();
 

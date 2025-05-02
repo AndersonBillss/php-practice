@@ -22,6 +22,29 @@
 
             <button type="submit">Signup</button>
         </form>
+
+        <form action="includes/userupdate.inc.php" method="post">
+            <label for="username">Username</label>
+            <input id="username" type="text" name="username" placeholder="Username...">
+
+            <label for="password">Password</label>
+            <input id="password" type="password" name="password" placeholder="Password...">
+
+            <label for="email">Email</label>
+            <input id="email" type="text" name="email" placeholder="Email...">
+
+            <button type="submit">Update</button>
+        </form>
+
+        <form action="includes/userdelete.inc.php" method="post">
+            <label for="username">Username</label>
+            <input id="username" type="text" name="username" placeholder="Username...">
+
+            <label for="password">Password</label>
+            <input id="password" type="password" name="password" placeholder="Password...">
+
+            <button type="submit">Delete</button>
+        </form>
     </main>
 </body>
 </html>
