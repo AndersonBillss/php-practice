@@ -21,18 +21,15 @@ input{
     background-color: rgb(239, 239, 239);
     border: none;
     padding: 5px 10px;
+    margin: 10px;
 }
-select{
-    background-color: rgb(239, 239, 239);
-    border: none;
-    padding: 5px 10px;
-    margin-bottom: 30px;
-}
+
 button{
     background-color: rgb(176, 255, 176);
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
+    margin: 10px;
 }
 button:hover{
     filter: brightness(80%);

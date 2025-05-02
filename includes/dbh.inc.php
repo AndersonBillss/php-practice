@@ -10,8 +10,3 @@ try {
 } catch (PDOException $err) {
     echo "Connection failed: " . $err->getMessage();
 }
-
-
-// Port 3306
-// my_first_php_database
-// http://localhost/phpmyadmin
